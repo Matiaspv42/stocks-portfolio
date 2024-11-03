@@ -19,7 +19,7 @@ export class Portfolio {
             }
 
             let totalProfit = 0;
-            for(let purchase of stockData.purchaseData){
+            for(const purchase of stockData.purchaseData){
                 const purchaseDate = new Date(purchase.date);
                 const isWithinRange =
                     (!startDate || purchaseDate >= new Date(startDate)) &&
@@ -39,7 +39,7 @@ export class Portfolio {
     
         for (const stock of this.stocks) {
             let totalProfit = 0;
-            for(let purchase of stock.purchaseData){
+            for(const purchase of stock.purchaseData){
                 const purchaseDate = new Date(purchase.date);
                 const isWithinRange =
                     (!startDate || purchaseDate >= new Date(startDate)) &&
